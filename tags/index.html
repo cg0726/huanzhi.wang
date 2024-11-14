@@ -64,7 +64,9 @@
 <widget class="widget-wrapper markdown"><div class="widget-header dis-select"><span class="name">欢迎！</span></div><div class="widget-body fs14"><p>兰陵美酒郁金香，玉碗盛来琥珀光。<br>但使主人能醉客，不知何处是他乡。</p>
 </div></widget>
 
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/post/0045.html"><span class="title">孟冬随想</span></a><a class="item title" href="/post/0004.html"><span class="title">通过PHP代码自动获取必应每日美图</span></a><a class="item title" href="/post/0002.html"><span class="title">本站改为静态博客重新上线</span></a><a class="item title" href="/post/0001.html"><span class="title">本站全新改版，使用Kratos主题</span></a><a class="item title" href="/post/0044.html"><span class="title">爬山记</span></a><a class="item title" href="/post/0043.html"><span class="title">鸿蒙OS NEXT ——我已更新，感觉良好！</span></a></div></widget>
+
+
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/post/0046.html"><span class="title">如何看待美国识字率只有79％？</span></a><a class="item title" href="/post/0045.html"><span class="title">孟冬随想</span></a><a class="item title" href="/post/0004.html"><span class="title">通过PHP代码自动获取必应每日美图</span></a><a class="item title" href="/post/0002.html"><span class="title">本站改为静态博客重新上线</span></a><a class="item title" href="/post/0001.html"><span class="title">本站全新改版，使用Kratos主题</span></a><a class="item title" href="/post/0044.html"><span class="title">爬山记</span></a></div></widget>
 
 
 </div>
@@ -130,6 +132,10 @@
           <span class='name'>MySQL</span>
         </a>
       
+        <a class='tag' href="/tags/%E5%A5%BD%E6%96%87%E8%BD%AC%E8%BD%BD/">
+          <span class='name'>好文转载</span>
+        </a>
+      
         <a class='tag' href="/tags/%E5%8D%8E%E8%93%A5%E5%B1%B1/">
           <span class='name'>华蓥山</span>
         </a>
@@ -154,20 +160,16 @@
           <span class='name'>Win10</span>
         </a>
       
-        <a class='tag' href="/tags/%E5%A5%BD%E6%96%87%E8%BD%AC%E8%BD%BD/">
-          <span class='name'>好文转载</span>
-        </a>
-      
         <a class='tag' href="/tags/%E5%8D%8E%E4%B8%BA/">
           <span class='name'>华为</span>
         </a>
       
-        <a class='tag' href="/tags/%E5%B0%8F%E8%AF%B4/">
-          <span class='name'>小说</span>
-        </a>
-      
         <a class='tag' href="/tags/%E4%BA%B2%E5%AD%90%E8%82%B2%E5%84%BF/">
           <span class='name'>亲子育儿</span>
+        </a>
+      
+        <a class='tag' href="/tags/%E5%B0%8F%E8%AF%B4/">
+          <span class='name'>小说</span>
         </a>
       
         <a class='tag' href="/tags/Hexo/">
@@ -230,6 +232,10 @@
           <span class='name'>无症状感染者</span>
         </a>
       
+        <a class='tag' href="/tags/%E9%87%87%E9%9B%86%E8%A7%84%E5%88%99/">
+          <span class='name'>采集规则</span>
+        </a>
+      
         <a class='tag' href="/tags/%E5%91%A8%E6%9D%B0%E4%BC%A6/">
           <span class='name'>周杰伦</span>
         </a>
@@ -240,10 +246,6 @@
       
         <a class='tag' href="/tags/%E5%90%AF%E5%8A%A8%E6%95%85%E9%9A%9C/">
           <span class='name'>启动故障</span>
-        </a>
-      
-        <a class='tag' href="/tags/%E9%87%87%E9%9B%86%E8%A7%84%E5%88%99/">
-          <span class='name'>采集规则</span>
         </a>
       
         <a class='tag' href="/tags/Word/">
@@ -258,16 +260,16 @@
           <span class='name'>网络监控</span>
         </a>
       
-        <a class='tag' href="/tags/OpenWrt/">
-          <span class='name'>OpenWrt</span>
+        <a class='tag' href="/tags/%E5%9F%9F%E5%90%8D/">
+          <span class='name'>域名</span>
         </a>
       
         <a class='tag' href="/tags/Nextcloud/">
           <span class='name'>Nextcloud</span>
         </a>
       
-        <a class='tag' href="/tags/%E5%9F%9F%E5%90%8D/">
-          <span class='name'>域名</span>
+        <a class='tag' href="/tags/OpenWrt/">
+          <span class='name'>OpenWrt</span>
         </a>
       
         <a class='tag' href="/tags/%E5%AD%90%E4%B8%BB%E9%A2%98/">
@@ -362,7 +364,7 @@ show_date_time();
     ctx.search = {};
     ctx.search.service = `local_search`;
     if (ctx.search.service == 'local_search') {
-      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"sort":"-date"}`);
+      let service_obj = Object.assign({}, `{"field":"post","path":"/search/search.json","content":true,"sort":"-date"}`);
       ctx.search[ctx.search.service] = service_obj;
     }
   }
@@ -695,7 +697,7 @@ show_date_time();
 <script>
   window.addEventListener('DOMContentLoaded', (event) => {
     ctx.search = {
-      path: `/search.json`,
+      path: `/search/search.json`,
     }
     utils.js('/js/search/local-search.js', { defer: true });
   });
