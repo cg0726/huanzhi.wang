@@ -70,7 +70,7 @@
 
 
 
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/post/0045.html"><span class="title">孟冬随想</span></a><a class="item title" href="/post/0044.html"><span class="title">爬山记</span></a><a class="item title" href="/post/0043.html"><span class="title">鸿蒙OS NEXT ——我已更新，感觉良好！</span></a><a class="item title" href="/post/0031.html"><span class="title">《我一个二级文明有二向箔很合理吧》读后感</span></a><a class="item title" href="/post/0013.html"><span class="title">【好文转载】深度解读：任正非与马云“一升一降”，预示着国家战略的巨大调整</span></a><a class="item title" href="/post/0042.html"><span class="title">2024·国庆节日记</span></a><a class="item title" href="/post/0030.html"><span class="title">摘柚子</span></a><a class="item title" href="/post/0040.html"><span class="title">再游九寨沟</span></a><a class="item title" href="/post/0036.html"><span class="title">痛风又犯了！痛</span></a><a class="item title" href="/post/0037.html"><span class="title">诗歌展示网站制作记</span></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/post/0045.html"><span class="title">孟冬随想</span></a><a class="item title" href="/post/0044.html"><span class="title">爬山记</span></a><a class="item title" href="/post/0043.html"><span class="title">鸿蒙OS NEXT ——我已更新，感觉良好！</span></a><a class="item title" href="/post/0031.html"><span class="title">《我一个二级文明有二向箔很合理吧》读后感</span></a><a class="item title" href="/post/0013.html"><span class="title">【好文转载】深度解读：任正非与马云“一升一降”，预示着国家战略的巨大调整</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -518,9 +518,9 @@ show_date_time();
 
   function load_twikoo() {
     if (!el) return;
-    utils.js('https://gcore.jsdelivr.net/npm/twikoo@1.6.32/dist/twikoo.all.min.js', {defer: true}).then(function () {
+    utils.js('https://gcore.jsdelivr.net/npm/twikoo@1.6.39/dist/twikoo.all.min.js', {defer: true}).then(function () {
       const path = el.getAttribute('comment_id') ?? decodeURI(window.location.pathname);
-      twikoo.init(Object.assign({"js":"https://gcore.jsdelivr.net/npm/twikoo@1.6.32/dist/twikoo.all.min.js","envId":"https://c.huanzhi.wang"}, {
+      twikoo.init(Object.assign({"js":"https://gcore.jsdelivr.net/npm/twikoo@1.6.39/dist/twikoo.all.min.js","envId":"https://c.huanzhi.wang"}, {
         el: '#twikoo_container',
         path: path,
       }));
